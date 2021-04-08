@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>HelloWorldUno</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+  	<servlet-name>OperacionServelt</servlet-name>
+  	<servlet-class>com.generation.practica1.OperacionServelt</servlet-class>
+  </servlet>
+    <servlet>
+  	<servlet-name>SumaServlet</servlet-name>
+  	<servlet-class>com.generation.practica1.SumaServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Resta</servlet-name>
+  	<servlet-class>com.generation.practica1.Resta</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Multiplicacion</servlet-name>
+  	<servlet-class>com.generation.practica1.MultiplicacionServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Division</servlet-name>
+  	<servlet-class>com.generation.practica1.DivisionServlet</servlet-class>
+  </servlet>
+  
+  
+  
+  
+  <!-- *****************************************************************************   mapeo -->
+  <servlet-mapping>
+  	<servlet-name>OperacionServelt</servlet-name>
+  	<url-pattern>/operaciones</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>SumaServlet</servlet-name>
+  	<url-pattern>/operacion/suma</url-pattern>
+  </servlet-mapping>
+   <servlet-mapping>
+  	<servlet-name>Resta</servlet-name>
+  	<url-pattern>/operacion/resta</url-pattern>
+  </servlet-mapping>
+     <servlet-mapping>
+  	<servlet-name>Multiplicacion</servlet-name>
+  	<url-pattern>/operacion/multiplicacion</url-pattern>
+  </servlet-mapping>
+ <servlet-mapping>
+  	<servlet-name>Division</servlet-name>
+  	<url-pattern>/operacion/division</url-pattern>
+  </servlet-mapping>
+  
+</web-app>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Materias</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form action="materias" method="post">
+            <div><h1>Materias por alumno</h1></div>
+            <div><br><br>
+                <label>Nombre: <input type="text" name="nombre" placeholder="Asignatura"></label>
+            </div>
+            <div><br>
+                <label>Descripcion: </label>
+                <textarea name="descripcion" rows="5" cols="30" placeholder="Escriba la descripcion de la materia"></textarea>
+            </div>
+            <div><br>
+                <label>Carrera: <input type="text" name="carrera"></label>
+            </div>
+            <div><br>
+                <label>Creditos: </label>
+                <input type="text" name="creditos" placeholder="Numero">
+            </div>
+            <div><br>
+                <label>Horario: </label>
+                <input type="text" name="horario">
+            </div>
+            <div><br>
+                <input type="submit" value="Enviar">
+            </div>
+        </form>
+    </body>
+</html>

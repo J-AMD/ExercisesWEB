@@ -1,0 +1,5 @@
+com\generation\musicalistjpahws\models\Album.class
+com\generation\musicalistjpahws\models\Artista.class
+com\generation\musicalistjpahws\models\Cancion.class
+com\generation\musicalistjpahws\models\PlayList.class
+com\generation\musicalistjpahws\models\Usuario.class

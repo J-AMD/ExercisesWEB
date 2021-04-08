@@ -1,0 +1,58 @@
+[
+    {
+        "nombre": "Leon",
+        "tipo": "felino",
+        "imagen": "http://www.estudiantes.info/ciencias_naturales/images/leonpadre2.jpg",
+        "ambiente": "sabana",
+        "extinto": false,
+        "tiempo_vida": 14
+    },
+    {
+        "nombre": "Dodo",
+        "tipo": "ave",
+        "imagen": "https://www.dodo.com/sites/dodo/files/2018-08/Dodo_06_Left_Home_LRG_1014x1049%20%281%29.png",
+        "ambiente": "jungla",
+        "extinto": true,
+        "tiempo_vida": 1
+    },
+    {
+        "nombre": "Demonio Tazmania",
+        "tipo": "marsupial",
+        "imagen": "https://vignette.wikia.nocookie.net/looneytunes/images/7/7f/Demonio_de_tazmania.jpg/revision/latest?cb=20111120054313&path-prefix=es",
+        "ambiente": "desertico",
+        "extinto": false,
+        "tiempo_vida": 5
+    },
+    {
+        "nombre": "Canguro",
+        "tipo": "marsupial",
+        "imagen": "https://c8.alamy.com/compes/p0ypwj/el-titulo-de-la-pelicula-original-kangaroo-jack-titulo-en-ingles-canguro-jack-el-director-de-cine-david-mcnally-ano-2003-credito-warner-bros-fotos-album-p0ypwj.jpg",
+        "ambiente": "desertico",
+        "extinto": false,
+        "tiempo_vida": 20
+    },
+    {
+        "nombre": "Rex",
+        "tipo": "reptil",
+        "imagen": "https://vignette.wikia.nocookie.net/pixar/images/a/a8/Rex_%28Toy_Story%29.png/revision/latest?cb=20181209010107",
+        "ambiente": "jungla",
+        "extinto": true,
+        "tiempo_vida": 30
+    },
+    {
+        "nombre": "Wombat",
+        "tipo": "marsupial",
+        "imagen": "https://i.ytimg.com/vi/OiuQ_rVM-WE/maxresdefault.jpg",
+        "ambiente": "desertico",
+        "extinto": false,
+        "tiempo_vida": 7
+    },
+    {
+        "nombre": "Dragon Comodo",
+        "tipo": "reptil",
+        "imagen": "https://st3.depositphotos.com/1025317/17967/i/1600/depositphotos_179676712-stock-photo-komodo-dragon-varanus-komodoensis-open.jpg",
+        "ambiente": "sabana",
+        "extinto": false,
+        "tiempo_vida": 7
+    }
+]

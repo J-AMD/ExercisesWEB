@@ -1,0 +1,23 @@
+import java.util.*;
+import java.util.ArrayList;
+public class Agenda {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		
+		List <Contacto> registro = new ArrayList();
+		
+		for(int i = 1; i<=10; i++) {
+			Contacto reg = new Contacto();
+			//reg.setNombre("Contacto"+i);
+			registro.add(reg);
+		}
+		
+		for(Contacto reg: registro) {
+			System.out.println(reg);
+		}
+	}
+
+}

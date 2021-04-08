@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" version="4.0">
+  <display-name>AplicacionOperaciones</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+  	<servlet-name>Suma</servlet-name>
+  	<servlet-class>com.generation.practica2.SumaServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Resta</servlet-name>
+  	<servlet-class>com.generation.practica2.RestaServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Multiplicacion</servlet-name>
+  	<servlet-class>com.generation.practica2.MultiplicacionServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Division</servlet-name>
+  	<servlet-class>com.generation.practica2.DivisionServlet</servlet-class>
+  </servlet>
+   <servlet>
+  	<servlet-name>CalcularResultado</servlet-name>
+  	<servlet-class>com.generation.practica2.CalcularServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Nombre</servlet-name>
+  	<servlet-class>com.generation.practica2.NombreServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Tabla</servlet-name>
+  	<servlet-class>com.generation.practica2.TablaMultiplicar</servlet-class>
+  </servlet>
+  <!-- *********************************************************** MAPEO -->
+  <servlet-mapping>
+  	<servlet-name>Suma</servlet-name>
+  	<url-pattern>/operacion/suma</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Resta</servlet-name>
+  	<url-pattern>/operacion/resta</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Multiplicacion</servlet-name>
+  	<url-pattern>/operacion/multiplicacion</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Division</servlet-name>
+  	<url-pattern>/operacion/division</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>CalcularResultado</servlet-name>
+  	<url-pattern>/calcular/resultado</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Nombre</servlet-name>
+  	<url-pattern>/calcular/nombre</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Tabla</servlet-name>
+  	<url-pattern>/calcular/tabla</url-pattern>
+  </servlet-mapping>
+</web-app>
+

@@ -1,0 +1,5 @@
+TestInsertSongs.class
+TestInsertQuery.class
+TestConectionJPAHibernate.class
+TestQueryUser.class
+TestSelectQuery.class

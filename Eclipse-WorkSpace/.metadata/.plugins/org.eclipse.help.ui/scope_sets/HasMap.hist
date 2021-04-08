@@ -1,0 +1,4 @@
+#Thu May 09 16:36:18 CDT 2019
+__DEFAULT__=false
+org.eclipse.help.ui.localSearch.master=true
+expression=HasMap

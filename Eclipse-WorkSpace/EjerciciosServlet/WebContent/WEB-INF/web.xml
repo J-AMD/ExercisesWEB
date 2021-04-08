@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>EjerciciosServlet</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+  	<servlet-name>DiaServlet</servlet-name>
+  	<servlet-class>com.generation.practica3.DiasServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>TrianguloServlet</servlet-name>
+  	<servlet-class>com.generation.practica3.TrianguloServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>RomboServlet</servlet-name>
+  	<servlet-class>com.generation.practica3.RomboServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>MostrarCadena</servlet-name>
+  	<servlet-class>com.generation.practica3.SepararCadena</servlet-class>
+  </servlet>
+  <!-- *******************************************************************    Mapeo -->
+  <servlet-mapping>
+  	<servlet-name>DiaServlet</servlet-name>
+  	<url-pattern>/dia/semana</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>TrianguloServlet</servlet-name>
+  	<url-pattern>/niveles/piramide</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>RomboServlet</servlet-name>
+  	<url-pattern>/figura/rombo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>MostrarCadena</servlet-name>
+  	<url-pattern>/mostrar/cadena</url-pattern>
+  </servlet-mapping>
+</web-app>

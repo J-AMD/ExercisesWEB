@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>Ejemplo AJAX</div>
+        <button onclick="traerDatos()">Consultar</button>
+        <button onclick="traerHTML()">HTML</button>
+        <button onclick="traerCatalogoXML()">Catalogo</button>
+        <button onclick="crearTablaXML()">Tabla CD's</button>
+        <div id="respuesta"></div>
+        <script type="text/javascript">
+            function traerDatos(){
+            var request = new XMLHttpRequest();
+            request.onreadystatechange = function(){
+                if(this.readyState == 4 && this.status == 200){ // el status quiere decir que ya hay una rspuesta del servidor
+                var contenedor = document.getElementById("respuesta");
+                contenedor.innerText = this.responseText;
+                }
+            }
+            
+            request.open("GET", "lista_cosas.txt", true);
+            request.send();
+        }
+        
+        function traerHTML(){
+            var request = new XMLHttpRequest();
+            request.onreadystatechange = function(){
+                if(this.readyState == 4 && this.status == 200){ // el status quiere decir que ya hay una rspuesta del servidor
+                var contenedor = document.getElementById("respuesta");
+                contenedor.innerText = this.responseText;
+                }
+            }
+            
+            request.open("GET", "pagina.html", true);
+            request.send();
+        }
+        
+        function traerCatalogoXML(){
+            var request = new XMLHttpRequest();
+            request.onreadystatechange = function(){
+                console.log(this);
+                if(this.readyState == 4 && this.status == 200){
+                    console.log(this.responseText);
+                    var contenedor = document.getElementById("respuesta");
+                    contenedor.innerText = this.responseText;
+                }
+            }
+            request.open("GET", "cd_catalog.xml", true);
+            request.send();
+        }
+        
+        function crearTablaXML(xmlDocument){
+            generarTabla(["Titulo", "Atista", "Pais", "Compañia", "Precio", "Año"]);
+            var request = new XMLHttpRequest();
+            request.onreadystatechange = function(){
+                if(this.readyState == 4 && this.status == 200){
+                    var documentXML = this.responseXML;
+                    var catalogXML = documentXML.children[0];
+                    
+                    for(i = 0; i < catalogXML.childElementCount; i++){
+                        var cd = catalogXML.children[i];
+                        var titulo = cd.children[0].innerHTML;
+                        var artista = cd.children[1].innerHTML;
+                        var pais = cd.children[2].innerHTML;
+                        var comp = cd.children[3].innerHTML;
+                        var precio = cd.children[4].innerHTML;
+                        var ano = cd.children[5].innerHTML;
+                        
+                        var cd = {
+                            titulo: titulo,
+                            artista: artista,
+                            pais: pais,
+                            compania: comp,
+                            precio: precio,
+                            ano: ano
+                        };
+                        
+                        crearFilaTabla(cd);
+                        
+                        console.log("CD" + (i+1));
+                        console.log(titulo);
+                        console.log(artista);
+                        console.log(pais);
+                        console.log(comp);
+                        console.log(precio);
+                        console.log(ano);
+                        console.log("*/*/*/*/*/*/*/*/*/*/*/*/*");
+                    }
+           // crearTablaXML1(documentXML);
+                }
+            }
+            
+            request.open("GET", "cd_catalog.xml", true)
+            request.send();
+        }
+        
+        function crearTablaXML1(xmlDocument){
+            var catalogoCD = xmlDocument.getElementsByTagName("CD");
+            for(i = 0; i < catalogoCD.length; i++){
+                console.log(catalogoCD[i]);
+                
+            }
+        }
+        
+        
+        function generarTabla(encabezados){
+            var tabla = document.createElement("table");
+            var trHead = document.createElement("tr");
+            
+            for(i = 0; i < encabezados.length; i++){
+                var encabezado = document.createElement("th");
+                var textoCelda = document.createTextNode(encabezados[i]);
+                encabezado.appendChild(textoCelda);
+                trHead.appendChild(encabezado);
+            }
+            
+            tabla.appendChild(trHead);
+            document.body.appendChild(tabla);
+        }
+        
+        function crearFilaTabla(cd){
+            var tabla = document.getElementsByTagName("table")[0];
+            var trCD = document.createElement("tr");
+            var tdTitulo = document.createElement("td");
+            var tdArtista = document.createElement("td");
+            var tdPais = document.createElement("td");
+            var tdCompania = document.createElement("td");
+            var tdPrecio = document.createElement("td");
+            var tdAno = document.createElement("td");
+            
+            //Agregar las celdas a la fila
+            tdTitulo.innerText = cd.titulo;
+            tdArtista.innerText = cd.artista;
+            tdPais.innerText = cd.pais;
+            tdCompania.innerText = cd.compania;
+            tdPrecio.innerText = cd.precio;
+            tdAno.innerText = cd.ano;
+            
+            trCD.appendChild(tdTitulo);
+            trCD.appendChild(tdArtista);
+            trCD.appendChild(tdPais);
+            trCD.appendChild(tdCompania);
+            trCD.appendChild(tdPrecio);
+            trCD.appendChild(tdAno);
+            
+            tabla.appendChild(trCD);
+        }
+        </script>
+    </body>
+</html>
